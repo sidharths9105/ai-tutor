@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tutor</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Learning Assistant</h1>
+
+        <div id="setup-section" class="card">
+            <h2>Start Your Lesson</h2>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject">
+                    <option value="math">Math</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="english">English</option>
+                    <option value="computer science">Computer Science</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="topic">Topic:</label>
+                <input type="text" id="topic" placeholder="e.g., Photosynthesis">
+            </div>
+            <div class="form-group">
+                <label for="level">Your Level:</label>
+                <select id="level">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+            <button id="generate-btn">Generate Lesson</button>
+        </div>
+
+        <div id="lesson-section" class="card hidden">
+            <h2 id="lesson-title"></h2>
+            <div id="lesson-content"></div>
+            <button id="start-quiz-btn" class="hidden">Test Your Knowledge</button>
+        </div>
+
+        <div id="quiz-section" class="card hidden">
+            <h2>Knowledge Check</h2>
+            <div id="quiz-content"></div>
+            <button id="submit-answer-btn" class="hidden">Submit Answer</button>
+            <div id="feedback-section"></div>
+        </div>
+        
+        <div id="result-section" class="card hidden">
+            <h2>Quiz Result</h2>
+            <p id="result-text"></p>
+            <button id="restart-btn">Start Another Topic</button>
+        </div>
+
+        <div id="loading-spinner" class="spinner-container hidden">
+            <div class="spinner"></div>
+        </div>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
