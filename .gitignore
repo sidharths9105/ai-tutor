@@ -1,0 +1,27 @@
+# .gitignore
+
+# --- Secrets and Credentials ---
+# Never commit your API keys or secret files.
+# The .streamlit/secrets.toml file contains your API key.
+.streamlit/
+
+# --- Python ---
+# General Python cache files and artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Virtual Environments ---
+# Common names for virtual environment folders
+venv/
+.venv/
+env/
+.env
+
+# --- IDE / Editor specific files ---
+# VS Code, PyCharm, etc.
+.vscode/
+.idea/
+
+
